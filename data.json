@@ -1,0 +1,1205 @@
+{
+  "generatedAt": "2026-09-10T12:21:03.781299+00:00",
+  "records": [
+    {
+      "platform": "Huawei",
+      "plant": "ACE ENGINEERING AND CONSTRUCTION CO.LTD.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 189.0,
+      "monthlyPR": 84.11,
+      "daysTotal": 30,
+      "daysExcluded": 9,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "ANG HIN ENERGY COMPANY LIMITED 44.1 kWp",
+      "yearMonth": "2026-06",
+      "capacityKwp": 44.1,
+      "monthlyPR": 80.74,
+      "daysTotal": 30,
+      "daysExcluded": 0,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "ANG HIN ENERGY COMPANY LIMITED 62.37 kWp",
+      "yearMonth": "2026-06",
+      "capacityKwp": 62.37,
+      "monthlyPR": 79.0,
+      "daysTotal": 30,
+      "daysExcluded": 0,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "ANG HIN ENERGY COMPANY LIMITED 91.98 kWp",
+      "yearMonth": "2026-06",
+      "capacityKwp": 91.98,
+      "monthlyPR": 80.81,
+      "daysTotal": 30,
+      "daysExcluded": 0,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "AUTO ONE BURAPHAPAT PETROLEUM CO.LTD (บ้านฉาง)",
+      "yearMonth": "2026-06",
+      "capacityKwp": 123.48,
+      "monthlyPR": 87.05,
+      "daysTotal": 30,
+      "daysExcluded": 3,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "AUTO ONE PETROLEUM CO.LTD. (เนินสำลี)",
+      "yearMonth": "2026-06",
+      "capacityKwp": 185.22,
+      "monthlyPR": 83.59,
+      "daysTotal": 30,
+      "daysExcluded": 6,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Absolute Print and Pack Co.Ltd.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 177.66,
+      "monthlyPR": 82.56,
+      "daysTotal": 30,
+      "daysExcluded": 5,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Astemo Korat Brake Systems Co.Ltd. Floating-Roof",
+      "yearMonth": "2026-06",
+      "capacityKwp": 1380.4,
+      "monthlyPR": 85.05,
+      "daysTotal": 30,
+      "daysExcluded": 6,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "B.K.J. Advanced Process Co.Ltd.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 999.44,
+      "monthlyPR": 87.24,
+      "daysTotal": 30,
+      "daysExcluded": 2,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "BANMAKHAMNGAM GLASS NOODLES FACTORY LTD.PART.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 103.32,
+      "monthlyPR": 84.16,
+      "daysTotal": 30,
+      "daysExcluded": 1,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "BGPL Thai Progress Garment",
+      "yearMonth": "2026-06",
+      "capacityKwp": 600.32,
+      "monthlyPR": 32.62,
+      "daysTotal": 30,
+      "daysExcluded": 5,
+      "status": "Abnormal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "BGPL Thai Switchboard and Metal Work  (Meter 2)",
+      "yearMonth": "2026-06",
+      "capacityKwp": 61.5,
+      "monthlyPR": 86.11,
+      "daysTotal": 30,
+      "daysExcluded": 4,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "BGPL Thai Switchboard and Metal Work (Meter 1)",
+      "yearMonth": "2026-06",
+      "capacityKwp": 120.54,
+      "monthlyPR": 86.98,
+      "daysTotal": 30,
+      "daysExcluded": 4,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "CB-COCONUTS CO.LTD.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 369.6,
+      "monthlyPR": 77.78,
+      "daysTotal": 30,
+      "daysExcluded": 1,
+      "status": "Low"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "CB-COCONUTS CO.LTD. Phase 2",
+      "yearMonth": "2026-06",
+      "capacityKwp": 124.8,
+      "monthlyPR": 77.47,
+      "daysTotal": 9,
+      "daysExcluded": 0,
+      "status": "Low"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "CYMMETRIK TECHNOLOGIES (THAILAND) CO. LTD.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 436.8,
+      "monthlyPR": 82.64,
+      "daysTotal": 30,
+      "daysExcluded": 8,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Capsule Products",
+      "yearMonth": "2026-06",
+      "capacityKwp": 0.0,
+      "monthlyPR": 0.0,
+      "daysTotal": 1,
+      "daysExcluded": 1,
+      "status": "No data"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Casday (Thailand) Corporation Co.Ltd.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 184.8,
+      "monthlyPR": 78.62,
+      "daysTotal": 30,
+      "daysExcluded": 5,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "DOD BIOTECH Public Co.Ltd.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 233.05,
+      "monthlyPR": 78.89,
+      "daysTotal": 30,
+      "daysExcluded": 1,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Deechai Paper Industrial",
+      "yearMonth": "2026-06",
+      "capacityKwp": 0.0,
+      "monthlyPR": 0.0,
+      "daysTotal": 1,
+      "daysExcluded": 1,
+      "status": "No data"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "EXCELLENT PRODUCTS MANUFACTURING COMPANY LIMITED",
+      "yearMonth": "2026-06",
+      "capacityKwp": 187.2,
+      "monthlyPR": 77.43,
+      "daysTotal": 30,
+      "daysExcluded": 3,
+      "status": "Low"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Everclever Co.Ltd",
+      "yearMonth": "2026-06",
+      "capacityKwp": 121.0,
+      "monthlyPR": 86.3,
+      "daysTotal": 30,
+      "daysExcluded": 8,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "FIRST RUBBER CO. LTD. B1",
+      "yearMonth": "2026-06",
+      "capacityKwp": 624.0,
+      "monthlyPR": 80.38,
+      "daysTotal": 30,
+      "daysExcluded": 5,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "FIRST RUBBER CO. LTD. B2",
+      "yearMonth": "2026-06",
+      "capacityKwp": 228.8,
+      "monthlyPR": 81.41,
+      "daysTotal": 30,
+      "daysExcluded": 4,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Golden Sea Frozen Foods Co.Ltd.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 441.0,
+      "monthlyPR": 85.33,
+      "daysTotal": 30,
+      "daysExcluded": 3,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "HC AND PR Pharmaceutical Co.Ltd.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 171.36,
+      "monthlyPR": 80.49,
+      "daysTotal": 30,
+      "daysExcluded": 5,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Hersun Thai International Company Limited 1",
+      "yearMonth": "2026-06",
+      "capacityKwp": 228.8,
+      "monthlyPR": 71.03,
+      "daysTotal": 30,
+      "daysExcluded": 6,
+      "status": "Low"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Hersun Thai International Company Limited 2",
+      "yearMonth": "2026-06",
+      "capacityKwp": 327.6,
+      "monthlyPR": 68.88,
+      "daysTotal": 30,
+      "daysExcluded": 6,
+      "status": "Abnormal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Hilding Anders (Thailand) Co.Ltd.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 187.2,
+      "monthlyPR": 77.34,
+      "daysTotal": 30,
+      "daysExcluded": 10,
+      "status": "Low"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Homda Mold Manufacturing Co.Ltd.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 431.2,
+      "monthlyPR": 75.75,
+      "daysTotal": 30,
+      "daysExcluded": 4,
+      "status": "Low"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Huamei (Thailand) Co.Ltd.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 231.4,
+      "monthlyPR": 80.73,
+      "daysTotal": 30,
+      "daysExcluded": 5,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Hwa Lin Stainless Steel Industry Co.Ltd.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 234.0,
+      "monthlyPR": 82.14,
+      "daysTotal": 30,
+      "daysExcluded": 6,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "J.C.P. INDUSTRIAL CO.LTD",
+      "yearMonth": "2026-06",
+      "capacityKwp": 214.5,
+      "monthlyPR": 78.49,
+      "daysTotal": 30,
+      "daysExcluded": 7,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "JST CABINETRY CO.LTD (231.21kW) 2",
+      "yearMonth": "2026-06",
+      "capacityKwp": 231.21,
+      "monthlyPR": 80.06,
+      "daysTotal": 30,
+      "daysExcluded": 5,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "JST CABINETRY CO.LTD (430.10kW) 1",
+      "yearMonth": "2026-06",
+      "capacityKwp": 430.1,
+      "monthlyPR": 77.65,
+      "daysTotal": 30,
+      "daysExcluded": 2,
+      "status": "Low"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "K LASER TECHNOLOGY (THAILAND) COMPANY LIMITED",
+      "yearMonth": "2026-06",
+      "capacityKwp": 665.28,
+      "monthlyPR": 81.29,
+      "daysTotal": 30,
+      "daysExcluded": 6,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "K.S.PART AND TOOLING ENGINEERING CO. LTD.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 122.88,
+      "monthlyPR": 84.06,
+      "daysTotal": 30,
+      "daysExcluded": 6,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "KLK INDUSTRY (166.4kW)",
+      "yearMonth": "2026-06",
+      "capacityKwp": 0.0,
+      "monthlyPR": 0.0,
+      "daysTotal": 1,
+      "daysExcluded": 1,
+      "status": "No data"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "KLK INDUSTRY (184.0kW)",
+      "yearMonth": "2026-06",
+      "capacityKwp": 0.0,
+      "monthlyPR": 0.0,
+      "daysTotal": 1,
+      "daysExcluded": 1,
+      "status": "No data"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Kitwaree-Tipwaree (Lampang) Ice Factory",
+      "yearMonth": "2026-06",
+      "capacityKwp": 180.4,
+      "monthlyPR": 84.68,
+      "daysTotal": 30,
+      "daysExcluded": 18,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "LAN TONG INDUSTRIAL CO.LTD.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 624.0,
+      "monthlyPR": 82.87,
+      "daysTotal": 30,
+      "daysExcluded": 6,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "LONGWELL COMPANY LIMITED",
+      "yearMonth": "2026-06",
+      "capacityKwp": 436.8,
+      "monthlyPR": 85.54,
+      "daysTotal": 30,
+      "daysExcluded": 6,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Long Jin (Thailand) Co. Ltd.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 369.6,
+      "monthlyPR": 75.23,
+      "daysTotal": 30,
+      "daysExcluded": 4,
+      "status": "Low"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "MAE MAE INDUSTRIAL Co.Ltd",
+      "yearMonth": "2026-06",
+      "capacityKwp": 756.0,
+      "monthlyPR": 81.24,
+      "daysTotal": 30,
+      "daysExcluded": 5,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "MING MONGKOL CHAREAN TANYA RICE MILL CO.LTD.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 312.32,
+      "monthlyPR": 76.42,
+      "daysTotal": 30,
+      "daysExcluded": 11,
+      "status": "Low"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Maxwell Innovation Co.Ltd",
+      "yearMonth": "2026-06",
+      "capacityKwp": 500.5,
+      "monthlyPR": 83.34,
+      "daysTotal": 30,
+      "daysExcluded": 2,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Minone Solar rooftop",
+      "yearMonth": "2026-06",
+      "capacityKwp": 0.0,
+      "monthlyPR": 0.0,
+      "daysTotal": 1,
+      "daysExcluded": 1,
+      "status": "No data"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Mitsui Hygiene Materials (Thailand) Co.Ltd.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 734.58,
+      "monthlyPR": 77.71,
+      "daysTotal": 30,
+      "daysExcluded": 5,
+      "status": "Low"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "N.B.J.POLYMER CO.LTD",
+      "yearMonth": "2026-06",
+      "capacityKwp": 226.1,
+      "monthlyPR": 80.75,
+      "daysTotal": 30,
+      "daysExcluded": 9,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "NAKHON SAWAN WUNSEN FACTORY LTD.PART.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 103.32,
+      "monthlyPR": 83.37,
+      "daysTotal": 30,
+      "daysExcluded": 1,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "NEW STAR FROZEN FOODS(THAILAND) COMPANY LIMITED",
+      "yearMonth": "2026-06",
+      "capacityKwp": 232.7,
+      "monthlyPR": 86.32,
+      "daysTotal": 30,
+      "daysExcluded": 2,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "NEXTRONICS ENGINEERING PH1",
+      "yearMonth": "2026-06",
+      "capacityKwp": 239.2,
+      "monthlyPR": 0.0,
+      "daysTotal": 1,
+      "daysExcluded": 1,
+      "status": "No data"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Nguanseng Nylon co.Ltd. building A",
+      "yearMonth": "2026-06",
+      "capacityKwp": 113.36,
+      "monthlyPR": 77.68,
+      "daysTotal": 30,
+      "daysExcluded": 5,
+      "status": "Low"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Nguanseng Nylon co.Ltd. building B",
+      "yearMonth": "2026-06",
+      "capacityKwp": 209.79,
+      "monthlyPR": 81.57,
+      "daysTotal": 30,
+      "daysExcluded": 5,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Nguanseng Nylon co.Ltd.building C",
+      "yearMonth": "2026-06",
+      "capacityKwp": 374.96,
+      "monthlyPR": 76.97,
+      "daysTotal": 30,
+      "daysExcluded": 5,
+      "status": "Low"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Nissei Trading (Thailand) Co.Ltd.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 436.0,
+      "monthlyPR": 76.13,
+      "daysTotal": 30,
+      "daysExcluded": 3,
+      "status": "Low"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Northern Glass Co.Ltd",
+      "yearMonth": "2026-06",
+      "capacityKwp": 468.42,
+      "monthlyPR": 80.08,
+      "daysTotal": 30,
+      "daysExcluded": 2,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "P.N.C.Industrial Co.Ltd. 1 (347.50 kW)",
+      "yearMonth": "2026-06",
+      "capacityKwp": 347.5,
+      "monthlyPR": 81.6,
+      "daysTotal": 30,
+      "daysExcluded": 8,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "P.N.C.Industrial Co.Ltd. 2 (300 kW)",
+      "yearMonth": "2026-06",
+      "capacityKwp": 300.0,
+      "monthlyPR": 70.08,
+      "daysTotal": 30,
+      "daysExcluded": 15,
+      "status": "Low"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "PHARKPHOOM LOGISTICS CO.LTD.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 106.2,
+      "monthlyPR": 84.84,
+      "daysTotal": 30,
+      "daysExcluded": 3,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "PHAYAO RAM HOSPITAL CO. LTD.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 441.0,
+      "monthlyPR": 71.7,
+      "daysTotal": 30,
+      "daysExcluded": 3,
+      "status": "Low"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "PHUNUMKIAT CO.LTD",
+      "yearMonth": "2026-06",
+      "capacityKwp": 999.18,
+      "monthlyPR": 83.9,
+      "daysTotal": 30,
+      "daysExcluded": 9,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "PICHAI JAPANESE FOOD COMPANY LIMITED",
+      "yearMonth": "2026-06",
+      "capacityKwp": 124.8,
+      "monthlyPR": 78.41,
+      "daysTotal": 30,
+      "daysExcluded": 2,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "PROMPT SINCERE COMPANY LIMITED",
+      "yearMonth": "2026-06",
+      "capacityKwp": 124.8,
+      "monthlyPR": 73.06,
+      "daysTotal": 30,
+      "daysExcluded": 2,
+      "status": "Low"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Petchkasem Vechakit Co.Ltd.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 190.4,
+      "monthlyPR": 89.41,
+      "daysTotal": 30,
+      "daysExcluded": 3,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Phoenix Steel Works Co.Ltd. Phase 1",
+      "yearMonth": "2026-06",
+      "capacityKwp": 380.6,
+      "monthlyPR": 71.54,
+      "daysTotal": 30,
+      "daysExcluded": 5,
+      "status": "Low"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Phoenix Steel Works Co.Ltd. Phase 2",
+      "yearMonth": "2026-06",
+      "capacityKwp": 360.96,
+      "monthlyPR": 81.74,
+      "daysTotal": 30,
+      "daysExcluded": 6,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Pure Chem Co.Ltd.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 374.96,
+      "monthlyPR": 73.98,
+      "daysTotal": 30,
+      "daysExcluded": 1,
+      "status": "Low"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "S. T. V. IMPORT EXPORT CO.LTD 1",
+      "yearMonth": "2026-06",
+      "capacityKwp": 400.02,
+      "monthlyPR": 77.99,
+      "daysTotal": 30,
+      "daysExcluded": 8,
+      "status": "Low"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "S. T. V. IMPORT EXPORT CO.LTD 2",
+      "yearMonth": "2026-06",
+      "capacityKwp": 156.94,
+      "monthlyPR": 80.73,
+      "daysTotal": 30,
+      "daysExcluded": 3,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "S.K.L.OIL Co.Ltd.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 102.5,
+      "monthlyPR": 80.77,
+      "daysTotal": 30,
+      "daysExcluded": 1,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "S.P.K PLASTIC CO.LTD.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 382.59,
+      "monthlyPR": 78.4,
+      "daysTotal": 30,
+      "daysExcluded": 7,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "SANGTHONGCHAI PLASTIC CO. LTD.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 109.8,
+      "monthlyPR": 79.1,
+      "daysTotal": 30,
+      "daysExcluded": 4,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "SANKI EASTERN (THAILAND) COMPANY LIMITED",
+      "yearMonth": "2026-06",
+      "capacityKwp": 937.3,
+      "monthlyPR": 72.9,
+      "daysTotal": 30,
+      "daysExcluded": 7,
+      "status": "Low"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "SANYOY INDUSTRIAL CO. LTD",
+      "yearMonth": "2026-06",
+      "capacityKwp": 229.32,
+      "monthlyPR": 82.34,
+      "daysTotal": 30,
+      "daysExcluded": 4,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "SIAMSINTORN COMPANY LIMITED",
+      "yearMonth": "2026-06",
+      "capacityKwp": 206.7,
+      "monthlyPR": 80.76,
+      "daysTotal": 30,
+      "daysExcluded": 1,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "SIRISAENGARUMPEE COMPANY LIMITED",
+      "yearMonth": "2026-06",
+      "capacityKwp": 437.98,
+      "monthlyPR": 83.44,
+      "daysTotal": 30,
+      "daysExcluded": 2,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "SR BIOMARINE COMPANY LIMITED",
+      "yearMonth": "2026-06",
+      "capacityKwp": 250.1,
+      "monthlyPR": 84.45,
+      "daysTotal": 30,
+      "daysExcluded": 28,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Sabina Farest Co.Ltd. 1",
+      "yearMonth": "2026-06",
+      "capacityKwp": 559.17,
+      "monthlyPR": 72.7,
+      "daysTotal": 30,
+      "daysExcluded": 6,
+      "status": "Low"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Sabina Farest Co.Ltd. 2",
+      "yearMonth": "2026-06",
+      "capacityKwp": 176.8,
+      "monthlyPR": 72.25,
+      "daysTotal": 30,
+      "daysExcluded": 6,
+      "status": "Low"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Sabina Public Company Limited",
+      "yearMonth": "2026-06",
+      "capacityKwp": 250.7,
+      "monthlyPR": 73.32,
+      "daysTotal": 30,
+      "daysExcluded": 5,
+      "status": "Low"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Sang Sawang Bat Brand CO.LTD",
+      "yearMonth": "2026-06",
+      "capacityKwp": 220.0,
+      "monthlyPR": 72.72,
+      "daysTotal": 30,
+      "daysExcluded": 6,
+      "status": "Low"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Seksun Technology (Thailand) Co.Ltd.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 1971.2,
+      "monthlyPR": 78.04,
+      "daysTotal": 30,
+      "daysExcluded": 6,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Sheng Tai Brassware (Thailand) Co.Ltd. (STB)",
+      "yearMonth": "2026-06",
+      "capacityKwp": 873.6,
+      "monthlyPR": 79.52,
+      "daysTotal": 30,
+      "daysExcluded": 8,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Sheng Tai Brassware (Thailand) Co.Ltd. (STI)",
+      "yearMonth": "2026-06",
+      "capacityKwp": 811.2,
+      "monthlyPR": 78.25,
+      "daysTotal": 30,
+      "daysExcluded": 3,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Sheng Tai Brassware (Thailand) Co.Ltd. (STT)",
+      "yearMonth": "2026-06",
+      "capacityKwp": 315.0,
+      "monthlyPR": 82.5,
+      "daysTotal": 30,
+      "daysExcluded": 7,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Sirivej Hospital",
+      "yearMonth": "2026-06",
+      "capacityKwp": 591.48,
+      "monthlyPR": 78.94,
+      "daysTotal": 30,
+      "daysExcluded": 7,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Super Production Co.Ltd.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 375.0,
+      "monthlyPR": 79.59,
+      "daysTotal": 30,
+      "daysExcluded": 8,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "TAI THAI RUBBER CO.LTD. 2",
+      "yearMonth": "2026-06",
+      "capacityKwp": 561.6,
+      "monthlyPR": 82.29,
+      "daysTotal": 30,
+      "daysExcluded": 5,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "TAYIH KENMOS AUTO PARTS (THAILAND) Co.Ltd.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 867.9,
+      "monthlyPR": 76.45,
+      "daysTotal": 30,
+      "daysExcluded": 9,
+      "status": "Low"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "TEAM PLAS CHEMICAL CO LTD  MDB 2",
+      "yearMonth": "2026-06",
+      "capacityKwp": 240.89,
+      "monthlyPR": 81.97,
+      "daysTotal": 30,
+      "daysExcluded": 3,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "TEAM PLAS CHEMICAL CO LTD MDB 1 and 3",
+      "yearMonth": "2026-06",
+      "capacityKwp": 462.16,
+      "monthlyPR": 80.24,
+      "daysTotal": 30,
+      "daysExcluded": 4,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "THAI FORGING ENGINEERING",
+      "yearMonth": "2026-06",
+      "capacityKwp": 1105.92,
+      "monthlyPR": 82.14,
+      "daysTotal": 30,
+      "daysExcluded": 3,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "THAIMILK DAIRY CO-OPERATIVE LTD. 374.40kW 1",
+      "yearMonth": "2026-06",
+      "capacityKwp": 374.4,
+      "monthlyPR": 82.75,
+      "daysTotal": 30,
+      "daysExcluded": 5,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "THAIMILK DAIRY CO-OPERATIVE LTD. 436.80kW 2",
+      "yearMonth": "2026-06",
+      "capacityKwp": 436.8,
+      "monthlyPR": 77.5,
+      "daysTotal": 30,
+      "daysExcluded": 0,
+      "status": "Low"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "THRIVE PRECISION INDUSTRY PH2",
+      "yearMonth": "2026-06",
+      "capacityKwp": 239.2,
+      "monthlyPR": 77.25,
+      "daysTotal": 2,
+      "daysExcluded": 0,
+      "status": "Low"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "TOP PLASTIC CO.LTD. 1",
+      "yearMonth": "2026-06",
+      "capacityKwp": 362.97,
+      "monthlyPR": 75.55,
+      "daysTotal": 30,
+      "daysExcluded": 2,
+      "status": "Low"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "TOP PLASTIC CO.LTD. 2",
+      "yearMonth": "2026-06",
+      "capacityKwp": 126.0,
+      "monthlyPR": 81.23,
+      "daysTotal": 30,
+      "daysExcluded": 2,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Thai Ho Sheng Packing Co.Ltd.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 616.0,
+      "monthlyPR": 78.86,
+      "daysTotal": 30,
+      "daysExcluded": 2,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Thai Rubber Latex Group Public Co.Ltd.  (Chiangrai)",
+      "yearMonth": "2026-06",
+      "capacityKwp": 125.4,
+      "monthlyPR": 93.08,
+      "daysTotal": 30,
+      "daysExcluded": 12,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Thai Rubber Latex Group Public Co.Ltd.  (Grove)",
+      "yearMonth": "2026-06",
+      "capacityKwp": 585.2,
+      "monthlyPR": 79.87,
+      "daysTotal": 30,
+      "daysExcluded": 8,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Thai Rubber Latex Group Public Co.Ltd. (Rayong)",
+      "yearMonth": "2026-06",
+      "capacityKwp": 313.5,
+      "monthlyPR": 85.05,
+      "daysTotal": 30,
+      "daysExcluded": 28,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Thai Song Dee Co.Ltd.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 235.95,
+      "monthlyPR": 80.81,
+      "daysTotal": 30,
+      "daysExcluded": 4,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Thaicheer Powder Industry Co.Ltd.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 352.8,
+      "monthlyPR": 81.47,
+      "daysTotal": 30,
+      "daysExcluded": 2,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Thanatherb Commercial Co.Ltd",
+      "yearMonth": "2026-06",
+      "capacityKwp": 369.6,
+      "monthlyPR": 0.0,
+      "daysTotal": 30,
+      "daysExcluded": 30,
+      "status": "No data"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "UICC Co.Ltd.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 120.19,
+      "monthlyPR": 80.11,
+      "daysTotal": 30,
+      "daysExcluded": 0,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "UNIQUE SEA PRODUCTS 239.2kWp_Meter01",
+      "yearMonth": "2026-06",
+      "capacityKwp": 239.2,
+      "monthlyPR": 81.82,
+      "daysTotal": 30,
+      "daysExcluded": 3,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "UNIQUE SEA PRODUCTS 374.4kWp_Meter02",
+      "yearMonth": "2026-06",
+      "capacityKwp": 374.4,
+      "monthlyPR": 81.96,
+      "daysTotal": 30,
+      "daysExcluded": 2,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "UYEMURA (THAILAND) CO.LTD (F4)",
+      "yearMonth": "2026-06",
+      "capacityKwp": 312.32,
+      "monthlyPR": 83.18,
+      "daysTotal": 30,
+      "daysExcluded": 9,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "UYEMURA (THAILAND) CO.LTD (F5)",
+      "yearMonth": "2026-06",
+      "capacityKwp": 999.68,
+      "monthlyPR": 83.96,
+      "daysTotal": 30,
+      "daysExcluded": 4,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Vilai Inter Co.Ltd",
+      "yearMonth": "2026-06",
+      "capacityKwp": 120.96,
+      "monthlyPR": 86.72,
+      "daysTotal": 30,
+      "daysExcluded": 6,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "WANGPETCH PLASTIC CO.LTD.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 431.2,
+      "monthlyPR": 73.41,
+      "daysTotal": 30,
+      "daysExcluded": 3,
+      "status": "Low"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "WING FUNG ADHESIVE MANUFACTURING COMPANY LIMITED",
+      "yearMonth": "2026-06",
+      "capacityKwp": 421.2,
+      "monthlyPR": 73.31,
+      "daysTotal": 30,
+      "daysExcluded": 2,
+      "status": "Low"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "WING FUNG PACKAGING COMPANY LIMITED",
+      "yearMonth": "2026-06",
+      "capacityKwp": 162.5,
+      "monthlyPR": 78.49,
+      "daysTotal": 30,
+      "daysExcluded": 2,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "WINSTAR COMPANY LIMITED",
+      "yearMonth": "2026-06",
+      "capacityKwp": 682.26,
+      "monthlyPR": 77.61,
+      "daysTotal": 30,
+      "daysExcluded": 13,
+      "status": "Low"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Wing Fung Packaging Co.Ltd (Lamphun)",
+      "yearMonth": "2026-06",
+      "capacityKwp": 124.74,
+      "monthlyPR": 76.66,
+      "daysTotal": 30,
+      "daysExcluded": 7,
+      "status": "Low"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "World Wide Mercantile",
+      "yearMonth": "2026-06",
+      "capacityKwp": 0.0,
+      "monthlyPR": 0.0,
+      "daysTotal": 1,
+      "daysExcluded": 1,
+      "status": "No data"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "YEE TA CO.LTD.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 167.2,
+      "monthlyPR": 82.94,
+      "daysTotal": 30,
+      "daysExcluded": 6,
+      "status": "Normal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Yang Ching Enterprise Co.Ltd. 1",
+      "yearMonth": "2026-06",
+      "capacityKwp": 184.8,
+      "monthlyPR": 65.43,
+      "daysTotal": 30,
+      "daysExcluded": 4,
+      "status": "Abnormal"
+    },
+    {
+      "platform": "Huawei",
+      "plant": "Yang Ching Enterprise Co.Ltd. 2",
+      "yearMonth": "2026-06",
+      "capacityKwp": 369.6,
+      "monthlyPR": 71.54,
+      "daysTotal": 30,
+      "daysExcluded": 7,
+      "status": "Low"
+    }
+  ]
+}

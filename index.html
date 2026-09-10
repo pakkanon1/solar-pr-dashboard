@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fleet PR Dashboard</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap');
+
+  :root{
+    color-scheme: light dark;
+    --bg:#f7f4ee;
+    --surface:#ffffff;
+    --surface-2:#f0ece2;
+    --border:#e2dccc;
+    --text:#292319;
+    --text-dim:#6b6252;
+    --text-faint:#a89d87;
+    --accent:#c2790f;
+    --accent-soft:#f4dfb8;
+    --sungrow:#c2560f;
+    --sungrow-soft:#f6ddc9;
+    --huawei:#8a1f2b;
+    --huawei-soft:#f2d9db;
+    --good:#3c7a4e;
+    --good-soft:#dcece0;
+    --warn:#a8721f;
+    --warn-soft:#f3e3c3;
+    --bad:#a8382c;
+    --bad-soft:#f4dad6;
+    --shadow: 0 1px 2px rgba(41,35,25,.06), 0 8px 24px -12px rgba(41,35,25,.18);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#171310;
+      --surface:#1f1a15;
+      --surface-2:#241e18;
+      --border:#382f24;
+      --text:#f1ead9;
+      --text-dim:#b8ab92;
+      --text-faint:#7c7160;
+      --accent:#e2a44b;
+      --accent-soft:#3a2c15;
+      --sungrow:#e2874b;
+      --sungrow-soft:#3a2818;
+      --huawei:#e0757f;
+      --huawei-soft:#3a1e21;
+      --good:#7fc396;
+      --good-soft:#1c2f22;
+      --warn:#e2b458;
+      --warn-soft:#332811;
+      --bad:#e28a7d;
+      --bad-soft:#33201c;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.5);
+    }
+  }
+
+  *{box-sizing:border-box;}
+  html,body{ margin:0; }
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Manrope',system-ui,-apple-system,'Noto Sans Thai',sans-serif;
+    padding:28px 32px 64px;
+  }
+  .mono{ font-family:'IBM Plex Mono', ui-monospace, monospace; font-variant-numeric:tabular-nums; }
+  img{ max-width:100%; }
+
+  .wrap{ max-width:1180px; margin:0 auto; }
+
+  header{
+    display:flex; align-items:flex-end; justify-content:space-between; gap:24px;
+    margin-bottom:26px; flex-wrap:wrap;
+  }
+  .title-block h1{
+    font-family:'Fraunces',serif; font-weight:600; font-size:30px; margin:0 0 4px;
+    letter-spacing:-.01em;
+  }
+  .title-block p{ margin:0; color:var(--text-dim); font-size:14px; max-width:52ch; }
+  .header-meta{ text-align:right; font-size:12px; color:var(--text-faint); }
+  .header-meta strong{ color:var(--text-dim); }
+
+  .stats{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:22px;
+  }
+  .stat{
+    background:var(--surface); border:1px solid var(--border); border-radius:12px;
+    padding:16px 18px; box-shadow:var(--shadow);
+  }
+  .stat .label{ font-size:11.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--text-faint); font-weight:700; margin-bottom:8px; }
+  .stat .value{ font-family:'Fraunces',serif; font-size:26px; font-weight:600; }
+  .stat .value small{ font-family:'Manrope'; font-size:14px; font-weight:700; color:var(--text-dim); }
+  .stat .sub{ font-size:12px; color:var(--text-faint); margin-top:4px; }
+
+  .panel{
+    background:var(--surface); border:1px solid var(--border); border-radius:14px;
+    box-shadow:var(--shadow); margin-bottom:20px; overflow:hidden;
+  }
+  .panel-head{
+    display:flex; align-items:center; justify-content:space-between; gap:12px;
+    padding:16px 20px; border-bottom:1px solid var(--border); flex-wrap:wrap;
+  }
+  .panel-head h2{ font-size:15px; font-weight:800; margin:0; }
+  .panel-body{ padding:18px 20px 20px; }
+
+  .tabs{ display:flex; gap:6px; background:var(--surface-2); padding:4px; border-radius:9px; }
+  .tab{ font-family:inherit; cursor:pointer; border:none; background:transparent; padding:6px 13px; border-radius:7px;
+    font-size:12.5px; font-weight:700; color:var(--text-dim); }
+  .tab.active{ background:var(--surface); color:var(--text); box-shadow:0 1px 2px rgba(0,0,0,.08); }
+
+  .empty{ text-align:center; padding:46px 20px; color:var(--text-dim); }
+  .empty .icon{ font-size:30px; margin-bottom:10px; }
+  .empty h3{ margin:0 0 6px; font-size:15px; color:var(--text); }
+  .empty p{ margin:0 auto 16px; max-width:42ch; font-size:13px; }
+
+  #chart-wrap{ position:relative; height:260px; }
+
+  .pill{ display:inline-flex; align-items:center; gap:5px; padding:3px 9px; border-radius:100px;
+    font-size:11px; font-weight:800; letter-spacing:.02em; }
+  .pill-sungrow{ background:var(--sungrow-soft); color:var(--sungrow); }
+  .pill-huawei{ background:var(--huawei-soft); color:var(--huawei); }
+  .pill-good{ background:var(--good-soft); color:var(--good); }
+  .pill-warn{ background:var(--warn-soft); color:var(--warn); }
+  .pill-bad{ background:var(--bad-soft); color:var(--bad); }
+
+  .table-scroll{ overflow-x:auto; }
+  table{ width:100%; border-collapse:collapse; font-size:13px; min-width:720px; }
+  thead th{ text-align:left; font-size:11px; text-transform:uppercase; letter-spacing:.05em;
+    color:var(--text-faint); font-weight:700; padding:0 10px 10px; border-bottom:1px solid var(--border);
+    white-space:nowrap; cursor:pointer; user-select:none; }
+  thead th:hover{ color:var(--text); }
+  thead th .arrow{ opacity:.5; margin-left:3px; font-size:10px; }
+  tbody td{ padding:11px 10px; border-bottom:1px solid var(--border); vertical-align:middle; }
+  tbody tr:last-child td{ border-bottom:none; }
+  tbody tr:hover{ background:var(--surface-2); }
+  td.plant{ font-weight:700; }
+  td.num{ font-family:'IBM Plex Mono'; font-variant-numeric:tabular-nums; text-align:right; }
+  .trend{ font-size:11px; margin-left:6px; }
+  .trend.up{ color:var(--good); }
+  .trend.down{ color:var(--bad); }
+
+  .filter-row{ display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+  select, input[type="text"]{ font-family:inherit; font-size:12.5px; padding:7px 10px; border-radius:8px;
+    border:1px solid var(--border); background:var(--surface); color:var(--text); }
+
+  footer{ text-align:center; color:var(--text-faint); font-size:11.5px; margin-top:30px; }
+
+  @media (max-width:760px){
+    .stats{ grid-template-columns:repeat(2,1fr); }
+    header{ flex-direction:column; align-items:stretch; }
+    .header-meta{ text-align:left; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="title-block">
+      <h1>Fleet PR Dashboard</h1>
+      <p>Performance Ratio ของทุกโครงการโซล่าร์ในพอร์ต รวมข้อมูลจาก Sungrow (iSolarCloud) และ Huawei (FusionSolar) ไว้ที่เดียว</p>
+    </div>
+    <div class="header-meta">
+      อัพเดทข้อมูลล่าสุด<br/>
+      <strong id="generated-at">–</strong>
+    </div>
+  </header>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="label">โครงการที่ติดตาม</div>
+      <div class="value mono" id="stat-plants">–</div>
+      <div class="sub" id="stat-plants-sub">&nbsp;</div>
+    </div>
+    <div class="stat">
+      <div class="label">PR เฉลี่ยเดือนล่าสุด</div>
+      <div class="value mono" id="stat-pr">–</div>
+      <div class="sub" id="stat-pr-sub">&nbsp;</div>
+    </div>
+    <div class="stat">
+      <div class="label">กำลังการผลิตรวม</div>
+      <div class="value mono" id="stat-capacity">–</div>
+      <div class="sub" id="stat-capacity-sub">&nbsp;</div>
+    </div>
+    <div class="stat">
+      <div class="label">ข้อมูลล่าสุด</div>
+      <div class="value mono" id="stat-latest" style="font-size:20px;">–</div>
+      <div class="sub" id="stat-latest-sub">&nbsp;</div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head">
+      <h2>เทรนด์ PR รายเดือน</h2>
+      <div class="tabs" id="chart-platform-tabs">
+        <button class="tab active" data-platform="all">ทั้งหมด</button>
+        <button class="tab" data-platform="Sungrow">Sungrow</button>
+        <button class="tab" data-platform="Huawei">Huawei</button>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div id="chart-wrap"><canvas id="trend-chart"></canvas></div>
+      <div class="empty" id="chart-empty" style="display:none;">
+        <div class="icon">📈</div>
+        <h3>ยังไม่มีข้อมูลเทรนด์</h3>
+        <p>ต้องมีข้อมูลอย่างน้อย 2 เดือนขึ้นไป กราฟเทรนด์จะขึ้นให้อัตโนมัติ</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head">
+      <h2>รายโครงการ</h2>
+      <div class="filter-row">
+        <select id="filter-month"></select>
+        <select id="filter-platform">
+          <option value="all">ทุกแพลตฟอร์ม</option>
+          <option value="Sungrow">Sungrow</option>
+          <option value="Huawei">Huawei</option>
+        </select>
+        <input type="text" id="filter-search" placeholder="ค้นหาชื่อโครงการ..." />
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="empty" id="table-empty">
+        <div class="icon">☀️</div>
+        <h3>ยังไม่มีข้อมูล PR</h3>
+        <p>เว็บนี้อัพเดทอัตโนมัติทุกครั้งที่คำนวณ PR เดือนใหม่เสร็จผ่าน /pr-calc — ยังไม่เคย deploy ข้อมูลจริงเลย</p>
+      </div>
+      <div class="table-scroll" id="table-scroll" style="display:none;">
+        <table>
+          <thead>
+            <tr>
+              <th data-sort="plant">โครงการ <span class="arrow"></span></th>
+              <th data-sort="platform">แพลตฟอร์ม <span class="arrow"></span></th>
+              <th data-sort="capacityKwp" style="text-align:right;">kWp <span class="arrow"></span></th>
+              <th data-sort="monthlyPR" style="text-align:right;">PR% <span class="arrow"></span></th>
+              <th data-sort="daysExcluded" style="text-align:right;">วันตัดออก <span class="arrow"></span></th>
+              <th data-sort="yearMonth" style="text-align:right;">เดือน <span class="arrow"></span></th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <footer>BGPL Solar PPA · Fleet PR Dashboard · สร้างและอัพเดทโดยอัตโนมัติผ่าน update_pr_database.py</footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<script>
+(function(){
+  "use strict";
+
+  var THRESH = { bad: 70, warn: 78 }; // <70 abnormal, 70-78 low, >=78 normal
+  var records = [];
+  var chartPlatformFilter = "all";
+  var sortState = { key: "monthlyPR", dir: "desc" };
+
+  function statusFor(pr){
+    if (pr < THRESH.bad) return { label: "ผิดปกติ", cls: "pill-bad" };
+    if (pr < THRESH.warn) return { label: "ต่ำ", cls: "pill-warn" };
+    return { label: "ปกติ", cls: "pill-good" };
+  }
+
+  var chart = null;
+
+  function latestMonth(){
+    var months = Array.from(new Set(records.map(function(r){ return r.yearMonth; }))).sort();
+    return months.length ? months[months.length - 1] : null;
+  }
+
+  function fillMonthFilter(){
+    var sel = document.getElementById("filter-month");
+    var months = Array.from(new Set(records.map(function(r){ return r.yearMonth; }))).sort().reverse();
+    var current = sel.value;
+    sel.innerHTML = '<option value="all">ทุกเดือน</option>' + months.map(function(m){ return '<option value="'+m+'">'+m+'</option>'; }).join("");
+    if (months.indexOf(current) > -1) sel.value = current;
+  }
+
+  function renderStats(){
+    var plantKeySet = new Set(records.map(function(r){ return r.platform + "|" + r.plant; }));
+    document.getElementById("stat-plants").textContent = plantKeySet.size || "–";
+    var platforms = Array.from(new Set(records.map(function(r){ return r.platform; })));
+    document.getElementById("stat-plants-sub").textContent = platforms.length ? platforms.join(" · ") : "รอข้อมูล";
+
+    var lm = latestMonth();
+    if (lm){
+      var lmRecs = records.filter(function(r){ return r.yearMonth === lm; });
+      var avg = lmRecs.reduce(function(s,r){ return s + r.monthlyPR; }, 0) / lmRecs.length;
+      document.getElementById("stat-pr").innerHTML = avg.toFixed(1) + '<small>%</small>';
+      document.getElementById("stat-pr-sub").textContent = lmRecs.length + " โครงการ · " + lm;
+
+      var cap = lmRecs.reduce(function(s,r){ return s + (r.capacityKwp||0); }, 0);
+      document.getElementById("stat-capacity").innerHTML = (cap/1000).toFixed(2) + '<small> MWp</small>';
+      document.getElementById("stat-capacity-sub").textContent = "เดือน " + lm;
+
+      document.getElementById("stat-latest").textContent = lm;
+      var months = Array.from(new Set(records.map(function(r){ return r.yearMonth; })));
+      document.getElementById("stat-latest-sub").textContent = months.length + " เดือนสะสม";
+    } else {
+      document.getElementById("stat-pr").textContent = "–";
+      document.getElementById("stat-pr-sub").textContent = "รอข้อมูล";
+      document.getElementById("stat-capacity").textContent = "–";
+      document.getElementById("stat-capacity-sub").textContent = "รอข้อมูล";
+      document.getElementById("stat-latest").textContent = "–";
+      document.getElementById("stat-latest-sub").textContent = "รอข้อมูล";
+    }
+  }
+
+  function computeSeries(platform){
+    var filtered = platform === "all" ? records : records.filter(function(r){ return r.platform === platform; });
+    var byMonth = {};
+    filtered.forEach(function(r){
+      byMonth[r.yearMonth] = byMonth[r.yearMonth] || [];
+      byMonth[r.yearMonth].push(r.monthlyPR);
+    });
+    var months = Object.keys(byMonth).sort();
+    return {
+      months: months,
+      avg: months.map(function(m){ var a = byMonth[m]; return a.reduce(function(s,v){return s+v;},0) / a.length; })
+    };
+  }
+
+  function renderChart(){
+    var months = Array.from(new Set(records.map(function(r){ return r.yearMonth; }))).sort();
+    var wrap = document.getElementById("chart-wrap");
+    var empty = document.getElementById("chart-empty");
+    if (months.length < 2){
+      wrap.style.display = "none"; empty.style.display = "block";
+      return;
+    }
+    wrap.style.display = "block"; empty.style.display = "none";
+
+    var datasets = [];
+    var styleFor = { Sungrow: { c: "#c2560f" }, Huawei: { c: "#8a1f2b" }, all: { c: "#c2790f" } };
+    if (chartPlatformFilter === "all"){
+      ["Sungrow","Huawei"].forEach(function(p){
+        var has = records.some(function(r){ return r.platform === p; });
+        if (!has) return;
+        var s = computeSeries(p);
+        var full = months.map(function(m){ var idx = s.months.indexOf(m); return idx > -1 ? s.avg[idx] : null; });
+        datasets.push({ label: p, data: full, borderColor: styleFor[p].c, backgroundColor: styleFor[p].c, tension: .3, spanGaps: true, pointRadius: 3 });
+      });
+    } else {
+      var s = computeSeries(chartPlatformFilter);
+      var full = months.map(function(m){ var idx = s.months.indexOf(m); return idx > -1 ? s.avg[idx] : null; });
+      datasets.push({ label: chartPlatformFilter, data: full, borderColor: styleFor[chartPlatformFilter].c, backgroundColor: styleFor[chartPlatformFilter].c, tension: .3, spanGaps: true, pointRadius: 3 });
+    }
+
+    var textColor = getComputedStyle(document.body).getPropertyValue("--text-dim").trim();
+    var gridColor = getComputedStyle(document.body).getPropertyValue("--border").trim();
+
+    if (chart) chart.destroy();
+    var ctx = document.getElementById("trend-chart").getContext("2d");
+    chart = new Chart(ctx, {
+      type: "line",
+      data: { labels: months, datasets: datasets },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        interaction: { mode: "index", intersect: false },
+        plugins: {
+          legend: { display: datasets.length > 1, labels: { color: textColor, font: { family: "Manrope", weight: 700, size: 12 } } },
+          tooltip: { callbacks: { label: function(ctx){ return ctx.dataset.label + ": " + ctx.parsed.y.toFixed(1) + "%"; } } }
+        },
+        scales: {
+          y: { ticks: { color: textColor, callback: function(v){ return v + "%"; } }, grid: { color: gridColor } },
+          x: { ticks: { color: textColor }, grid: { display: false } }
+        }
+      }
+    });
+  }
+
+  function prevMonthPR(rec){
+    var same = records.filter(function(r){ return r.platform === rec.platform && r.plant === rec.plant && r.yearMonth < rec.yearMonth; });
+    if (!same.length) return null;
+    same.sort(function(a,b){ return a.yearMonth < b.yearMonth ? 1 : -1; });
+    return same[0].monthlyPR;
+  }
+
+  function renderTable(){
+    var monthFilter = document.getElementById("filter-month").value;
+    var platformFilter = document.getElementById("filter-platform").value;
+    var search = document.getElementById("filter-search").value.trim().toLowerCase();
+
+    var mf = monthFilter === "all" ? latestMonth() : monthFilter;
+    var rows = records.filter(function(r){
+      if (mf && r.yearMonth !== mf) return false;
+      if (platformFilter !== "all" && r.platform !== platformFilter) return false;
+      if (search && r.plant.toLowerCase().indexOf(search) === -1) return false;
+      return true;
+    });
+
+    rows.sort(function(a,b){
+      var k = sortState.key, dir = sortState.dir === "asc" ? 1 : -1;
+      var av = a[k], bv = b[k];
+      if (typeof av === "string") return av.localeCompare(bv) * dir;
+      return ((av||0) - (bv||0)) * dir;
+    });
+
+    var emptyEl = document.getElementById("table-empty");
+    var scrollEl = document.getElementById("table-scroll");
+    if (!records.length){
+      emptyEl.style.display = "block"; scrollEl.style.display = "none";
+      return;
+    }
+    emptyEl.style.display = "none"; scrollEl.style.display = "block";
+
+    var body = document.getElementById("table-body");
+    body.innerHTML = rows.map(function(r){
+      var pill = r.platform === "Sungrow" ? "pill-sungrow" : "pill-huawei";
+      var st = statusFor(r.monthlyPR);
+      var prev = prevMonthPR(r);
+      var trendHtml = "";
+      if (prev != null){
+        var diff = r.monthlyPR - prev;
+        if (Math.abs(diff) >= 0.05){
+          trendHtml = '<span class="trend ' + (diff >= 0 ? "up" : "down") + '">' + (diff >= 0 ? "▲" : "▼") + Math.abs(diff).toFixed(1) + '</span>';
+        }
+      }
+      return "<tr>" +
+        '<td class="plant">' + escapeHtml(r.plant) + "</td>" +
+        '<td><span class="pill ' + pill + '">' + r.platform + "</span></td>" +
+        '<td class="num">' + (r.capacityKwp ? r.capacityKwp.toFixed(1) : "–") + "</td>" +
+        '<td class="num">' + r.monthlyPR.toFixed(1) + "% " + trendHtml + ' <span class="pill ' + st.cls + '" style="margin-left:6px;">' + st.label + "</span></td>" +
+        '<td class="num">' + (r.daysExcluded != null ? r.daysExcluded : "–") + "</td>" +
+        '<td class="num">' + r.yearMonth + "</td>" +
+        "</tr>";
+    }).join("");
+  }
+
+  function escapeHtml(s){
+    return String(s).replace(/[&<>"']/g, function(c){
+      return { "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c];
+    });
+  }
+
+  function render(){
+    fillMonthFilter();
+    renderStats();
+    renderChart();
+    renderTable();
+  }
+
+  document.querySelectorAll("#chart-platform-tabs .tab").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      document.querySelectorAll("#chart-platform-tabs .tab").forEach(function(b){ b.classList.remove("active"); });
+      btn.classList.add("active");
+      chartPlatformFilter = btn.dataset.platform;
+      renderChart();
+    });
+  });
+  document.getElementById("filter-month").addEventListener("change", renderTable);
+  document.getElementById("filter-platform").addEventListener("change", renderTable);
+  document.getElementById("filter-search").addEventListener("input", renderTable);
+  document.querySelectorAll("thead th[data-sort]").forEach(function(th){
+    th.addEventListener("click", function(){
+      var key = th.dataset.sort;
+      if (sortState.key === key) sortState.dir = sortState.dir === "asc" ? "desc" : "asc";
+      else { sortState.key = key; sortState.dir = key === "plant" || key === "platform" ? "asc" : "desc"; }
+      renderTable();
+    });
+  });
+
+  fetch("./data.json?_=" + Date.now())
+    .then(function(r){ return r.json(); })
+    .then(function(json){
+      records = json.records || [];
+      document.getElementById("generated-at").textContent = json.generatedAt
+        ? new Date(json.generatedAt).toLocaleString("th-TH", { dateStyle: "medium", timeStyle: "short" })
+        : "–";
+      render();
+    })
+    .catch(function(err){
+      console.error("โหลด data.json ไม่สำเร็จ", err);
+      render();
+    });
+})();
+</script>
+</body>
+</html>
