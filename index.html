@@ -102,6 +102,10 @@
   }
   .panel-head h2{ font-size:15px; font-weight:800; margin:0; }
   .panel-body{ padding:18px 20px 20px; }
+  #anomaly-panel{ border-color:var(--warn); }
+  #anomaly-panel .panel-head{ background:var(--warn-soft); border-bottom-color:var(--warn); }
+  #anomaly-panel .panel-head h2{ color:var(--warn); }
+  .pill-nodata{ background:var(--surface-2); color:var(--text-faint); }
 
   .tabs{ display:flex; gap:6px; background:var(--surface-2); padding:4px; border-radius:9px; }
   .tab{ font-family:inherit; cursor:pointer; border:none; background:transparent; padding:6px 13px; border-radius:7px;
@@ -189,6 +193,29 @@
     </div>
   </div>
 
+  <div class="panel" id="anomaly-panel" style="display:none;">
+    <div class="panel-head">
+      <h2>⚠️ ข้อมูลผิดปกติที่ควรตรวจสอบ</h2>
+      <button class="tab" id="anomaly-toggle" style="background:var(--surface-2);">แสดง/ซ่อนรายการ</button>
+    </div>
+    <div class="panel-body" id="anomaly-body" style="display:none;">
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>โครงการ</th>
+              <th>แพลตฟอร์ม</th>
+              <th>เดือน</th>
+              <th style="text-align:right;">PR%</th>
+              <th>สาเหตุที่แจ้งเตือน</th>
+            </tr>
+          </thead>
+          <tbody id="anomaly-body-rows"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
   <div class="panel">
     <div class="panel-head">
       <h2>เทรนด์ PR รายเดือน</h2>
@@ -258,10 +285,59 @@
   var chartPlatformFilter = "all";
   var sortState = { key: "monthlyPR", dir: "desc" };
 
-  function statusFor(pr){
+  function isNoData(rec){
+    return /no\s*data/i.test(rec.status || "");
+  }
+
+  function statusFor(rec){
+    if (isNoData(rec)) return { label: "ไม่มีข้อมูล", cls: "pill-nodata" };
+    var pr = rec.monthlyPR;
     if (pr < THRESH.bad) return { label: "ผิดปกติ", cls: "pill-bad" };
     if (pr < THRESH.warn) return { label: "ต่ำ", cls: "pill-warn" };
     return { label: "ปกติ", cls: "pill-good" };
+  }
+
+  function findAnomalies(){
+    var out = [];
+    records.forEach(function(r){
+      if (isNoData(r)){
+        out.push({ rec: r, reason: "ไม่มีข้อมูลจากต้นทาง (No data)" });
+      } else if (r.monthlyPR > 100) {
+        out.push({ rec: r, reason: "PR เกิน 100% (ผิดหลักการ PR ปกติ — ควรตรวจสอบข้อมูลดิบ)" });
+      } else if (r.monthlyPR < 0) {
+        out.push({ rec: r, reason: "PR ติดลบ (ค่าผิดปกติ)" });
+      }
+    });
+    // เดือนล่าสุดก่อน แล้วชื่อโครงการ
+    out.sort(function(a,b){
+      if (a.rec.yearMonth !== b.rec.yearMonth) return a.rec.yearMonth < b.rec.yearMonth ? 1 : -1;
+      return a.rec.plant.localeCompare(b.rec.plant);
+    });
+    return out;
+  }
+
+  function renderAnomalies(){
+    var anomalies = findAnomalies();
+    var panel = document.getElementById("anomaly-panel");
+    if (!anomalies.length){
+      panel.style.display = "none";
+      return;
+    }
+    panel.style.display = "block";
+    var heading = panel.querySelector(".panel-head h2");
+    heading.textContent = "⚠️ ข้อมูลผิดปกติที่ควรตรวจสอบ (" + anomalies.length + ")";
+    var body = document.getElementById("anomaly-body-rows");
+    body.innerHTML = anomalies.map(function(a){
+      var r = a.rec;
+      var pill = r.platform === "Sungrow" ? "pill-sungrow" : "pill-huawei";
+      return "<tr>" +
+        '<td class="plant">' + escapeHtml(r.plant) + "</td>" +
+        '<td><span class="pill ' + pill + '">' + r.platform + "</span></td>" +
+        '<td class="num">' + r.yearMonth + "</td>" +
+        '<td class="num">' + (isNoData(r) ? "–" : r.monthlyPR.toFixed(1) + "%") + "</td>" +
+        "<td>" + escapeHtml(a.reason) + "</td>" +
+        "</tr>";
+    }).join("");
   }
 
   var chart = null;
@@ -410,7 +486,7 @@
     var body = document.getElementById("table-body");
     body.innerHTML = rows.map(function(r){
       var pill = r.platform === "Sungrow" ? "pill-sungrow" : "pill-huawei";
-      var st = statusFor(r.monthlyPR);
+      var st = statusFor(r);
       var prev = prevMonthPR(r);
       var trendHtml = "";
       if (prev != null){
@@ -439,6 +515,7 @@
   function render(){
     fillMonthFilter();
     renderStats();
+    renderAnomalies();
     try {
       renderChart();
     } catch (e) {
@@ -448,6 +525,11 @@
     }
     renderTable();
   }
+
+  document.getElementById("anomaly-toggle").addEventListener("click", function(){
+    var body = document.getElementById("anomaly-body");
+    body.style.display = body.style.display === "none" ? "block" : "none";
+  });
 
   document.querySelectorAll("#chart-platform-tabs .tab").forEach(function(btn){
     btn.addEventListener("click", function(){
