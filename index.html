@@ -248,7 +248,7 @@
   <footer>BGPL Solar PPA · Fleet PR Dashboard · สร้างและอัพเดทโดยอัตโนมัติผ่าน update_pr_database.py</footer>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.5.1/chart.umd.min.js"></script>
 <script>
 (function(){
   "use strict";
@@ -439,7 +439,13 @@
   function render(){
     fillMonthFilter();
     renderStats();
-    renderChart();
+    try {
+      renderChart();
+    } catch (e) {
+      console.error("renderChart failed:", e);
+      document.getElementById("chart-wrap").style.display = "none";
+      document.getElementById("chart-empty").style.display = "block";
+    }
     renderTable();
   }
 
