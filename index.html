@@ -120,20 +120,23 @@
   #chart-wrap{ position:relative; height:260px; }
 
   .project-compare{ margin-bottom:14px; }
-  .project-compare label{ display:block; font-size:12px; font-weight:700; color:var(--text-dim); margin-bottom:6px; }
+  .project-compare-label{ display:block; font-size:12px; font-weight:700; color:var(--text-dim); margin-bottom:6px; }
   .project-search-wrap{ position:relative; max-width:420px; }
-  #project-search{ width:100%; }
+  #project-search{ width:100%; padding-right:30px; cursor:pointer; }
+  .dropdown-arrow{ position:absolute; right:12px; top:50%; transform:translateY(-50%); color:var(--text-faint); pointer-events:none; font-size:12px; }
   #project-suggestions{
     display:none; position:absolute; top:calc(100% + 4px); left:0; right:0; z-index:20;
     background:var(--surface); border:1px solid var(--border); border-radius:9px;
-    box-shadow:var(--shadow); max-height:240px; overflow-y:auto;
+    box-shadow:var(--shadow); max-height:280px; overflow-y:auto;
   }
   #project-suggestions.open{ display:block; }
   .suggestion-item{
     padding:8px 12px; font-size:13px; cursor:pointer; display:flex; align-items:center; gap:8px;
+    margin:0; font-weight:400; color:var(--text);
   }
   .suggestion-item:hover{ background:var(--surface-2); }
   .suggestion-item .pill{ flex-shrink:0; }
+  .suggestion-item input[type="checkbox"]{ flex-shrink:0; width:15px; height:15px; accent-color:var(--accent); cursor:pointer; }
   #project-chips{ display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
   .chip{
     display:inline-flex; align-items:center; gap:6px; padding:4px 6px 4px 10px; border-radius:100px;
@@ -254,9 +257,10 @@
     </div>
     <div class="panel-body">
       <div class="project-compare">
-        <label for="project-search">เปรียบเทียบรายโครงการ (เลือกได้หลายโครงการ):</label>
+        <label for="project-search" class="project-compare-label">เปรียบเทียบรายโครงการ (ติ๊กเลือกได้หลายโครงการ):</label>
         <div class="project-search-wrap">
-          <input type="text" id="project-search" placeholder="พิมพ์ชื่อโครงการเพื่อค้นหา..." autocomplete="off" />
+          <input type="text" id="project-search" placeholder="คลิกเพื่อเลือกโครงการ หรือพิมพ์ค้นหา..." autocomplete="off" />
+          <span class="dropdown-arrow">▾</span>
           <div id="project-suggestions"></div>
         </div>
         <div id="project-chips"></div>
@@ -621,33 +625,52 @@
         selectedProjects = selectedProjects.filter(function(p){ return !(p.platform === platform && p.plant === plant); });
         renderChips();
         renderChart();
+        // ถ้า dropdown เปิดอยู่ ให้ sync checkbox ให้ตรงกับสถานะใหม่ด้วย
+        if (document.getElementById("project-suggestions").classList.contains("open")){
+          showSuggestions(document.getElementById("project-search").value.trim());
+        }
       });
     });
   }
 
+  function toggleProject(platform, plant){
+    if (isSelected(platform, plant)){
+      selectedProjects = selectedProjects.filter(function(p){ return !(p.platform === platform && p.plant === plant); });
+    } else {
+      var color = PROJECT_COLORS[selectedProjects.length % PROJECT_COLORS.length];
+      selectedProjects.push({ platform: platform, plant: plant, color: color });
+    }
+    renderChips();
+    renderChart();
+  }
+
   function showSuggestions(query){
     var box = document.getElementById("project-suggestions");
-    if (!query){ box.classList.remove("open"); box.innerHTML = ""; return; }
-    var q = query.toLowerCase();
+    var q = (query || "").toLowerCase();
+    // ไม่พิมพ์อะไรเลย = โชว์ทั้งหมด (แบบ dropdown ปกติ), พิมพ์แล้ว = กรองตามคำค้น
+    // แสดงทั้งที่เลือกแล้วและยังไม่เลือก พร้อมช่องติ๊ก — ติ๊ก/ถอดได้โดยไม่ต้องปิด dropdown
     var matches = allProjectOptions().filter(function(p){
-      return p.plant.toLowerCase().indexOf(q) > -1 && !isSelected(p.platform, p.plant);
-    }).slice(0, 20);
-    if (!matches.length){ box.classList.remove("open"); box.innerHTML = ""; return; }
+      return !q || p.plant.toLowerCase().indexOf(q) > -1;
+    });
+    if (!matches.length){
+      box.innerHTML = '<div class="suggestion-item" style="color:var(--text-faint);cursor:default;">ไม่พบโครงการที่ตรงกับคำค้น</div>';
+      box.classList.add("open");
+      return;
+    }
     box.innerHTML = matches.map(function(p){
       var pill = p.platform === "Sungrow" ? "pill-sungrow" : "pill-huawei";
-      return '<div class="suggestion-item" data-platform="' + escapeHtml(p.platform) + '" data-plant="' + escapeHtml(p.plant) + '">' +
-        '<span class="pill ' + pill + '">' + p.platform + '</span>' + escapeHtml(p.plant) + '</div>';
+      var checked = isSelected(p.platform, p.plant);
+      return '<label class="suggestion-item" data-platform="' + escapeHtml(p.platform) + '" data-plant="' + escapeHtml(p.plant) + '">' +
+        '<input type="checkbox" ' + (checked ? "checked" : "") + ' />' +
+        '<span class="pill ' + pill + '">' + p.platform + '</span>' + escapeHtml(p.plant) + '</label>';
     }).join("");
     box.classList.add("open");
     box.querySelectorAll(".suggestion-item").forEach(function(item){
-      item.addEventListener("click", function(){
+      item.addEventListener("click", function(e){
+        e.preventDefault(); // จัดการ toggle เองทีเดียว ไม่ให้ checkbox native กับ JS ชนกัน
         var platform = item.dataset.platform, plant = item.dataset.plant;
-        var color = PROJECT_COLORS[selectedProjects.length % PROJECT_COLORS.length];
-        selectedProjects.push({ platform: platform, plant: plant, color: color });
-        document.getElementById("project-search").value = "";
-        box.classList.remove("open"); box.innerHTML = "";
-        renderChips();
-        renderChart();
+        toggleProject(platform, plant);
+        item.querySelector("input[type=checkbox]").checked = isSelected(platform, plant);
       });
     });
   }
@@ -656,7 +679,10 @@
     showSuggestions(e.target.value.trim());
   });
   document.getElementById("project-search").addEventListener("focus", function(e){
-    if (e.target.value.trim()) showSuggestions(e.target.value.trim());
+    showSuggestions(e.target.value.trim());
+  });
+  document.getElementById("project-search").addEventListener("click", function(e){
+    showSuggestions(e.target.value.trim());
   });
   document.addEventListener("click", function(e){
     var wrap = document.querySelector(".project-search-wrap");
