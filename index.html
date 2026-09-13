@@ -119,6 +119,33 @@
 
   #chart-wrap{ position:relative; height:260px; }
 
+  .project-compare{ margin-bottom:14px; }
+  .project-compare label{ display:block; font-size:12px; font-weight:700; color:var(--text-dim); margin-bottom:6px; }
+  .project-search-wrap{ position:relative; max-width:420px; }
+  #project-search{ width:100%; }
+  #project-suggestions{
+    display:none; position:absolute; top:calc(100% + 4px); left:0; right:0; z-index:20;
+    background:var(--surface); border:1px solid var(--border); border-radius:9px;
+    box-shadow:var(--shadow); max-height:240px; overflow-y:auto;
+  }
+  #project-suggestions.open{ display:block; }
+  .suggestion-item{
+    padding:8px 12px; font-size:13px; cursor:pointer; display:flex; align-items:center; gap:8px;
+  }
+  .suggestion-item:hover{ background:var(--surface-2); }
+  .suggestion-item .pill{ flex-shrink:0; }
+  #project-chips{ display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
+  .chip{
+    display:inline-flex; align-items:center; gap:6px; padding:4px 6px 4px 10px; border-radius:100px;
+    font-size:12px; font-weight:700; background:var(--surface-2); border:1px solid var(--border);
+  }
+  .chip .dot{ width:8px; height:8px; border-radius:50%; flex-shrink:0; }
+  .chip button{
+    border:none; background:transparent; color:var(--text-faint); font-size:14px; line-height:1;
+    padding:2px 4px; border-radius:50%;
+  }
+  .chip button:hover{ background:var(--border); color:var(--text); }
+
   .pill{ display:inline-flex; align-items:center; gap:5px; padding:3px 9px; border-radius:100px;
     font-size:11px; font-weight:800; letter-spacing:.02em; }
   .pill-sungrow{ background:var(--sungrow-soft); color:var(--sungrow); }
@@ -220,12 +247,20 @@
     <div class="panel-head">
       <h2>เทรนด์ PR รายเดือน</h2>
       <div class="tabs" id="chart-platform-tabs">
-        <button class="tab active" data-platform="all">ทั้งหมด</button>
-        <button class="tab" data-platform="Sungrow">Sungrow</button>
-        <button class="tab" data-platform="Huawei">Huawei</button>
+        <button class="tab active" data-platform="all">ทั้งหมด (เฉลี่ย)</button>
+        <button class="tab" data-platform="Sungrow">Sungrow (เฉลี่ย)</button>
+        <button class="tab" data-platform="Huawei">Huawei (เฉลี่ย)</button>
       </div>
     </div>
     <div class="panel-body">
+      <div class="project-compare">
+        <label for="project-search">เปรียบเทียบรายโครงการ (เลือกได้หลายโครงการ):</label>
+        <div class="project-search-wrap">
+          <input type="text" id="project-search" placeholder="พิมพ์ชื่อโครงการเพื่อค้นหา..." autocomplete="off" />
+          <div id="project-suggestions"></div>
+        </div>
+        <div id="project-chips"></div>
+      </div>
       <div id="chart-wrap"><canvas id="trend-chart"></canvas></div>
       <div class="empty" id="chart-empty" style="display:none;">
         <div class="icon">📈</div>
@@ -283,6 +318,8 @@
   var THRESH = { bad: 70, warn: 78 }; // <70 abnormal, 70-78 low, >=78 normal
   var records = [];
   var chartPlatformFilter = "all";
+  var selectedProjects = []; // [{platform, plant, color}]
+  var PROJECT_COLORS = ["#c2790f","#2f7b7b","#8a1f2b","#4a6fa5","#7a5195","#2e8b57","#b5541f","#5c6bc0","#00838f","#c2185b"];
   var sortState = { key: "monthlyPR", dir: "desc" };
 
   function isNoData(rec){
@@ -399,6 +436,13 @@
     };
   }
 
+  function computeProjectSeries(platform, plant){
+    var filtered = records.filter(function(r){ return r.platform === platform && r.plant === plant; });
+    var byMonth = {};
+    filtered.forEach(function(r){ byMonth[r.yearMonth] = r.monthlyPR; });
+    return byMonth;
+  }
+
   function renderChart(){
     var months = Array.from(new Set(records.map(function(r){ return r.yearMonth; }))).sort();
     var wrap = document.getElementById("chart-wrap");
@@ -410,19 +454,27 @@
     wrap.style.display = "block"; empty.style.display = "none";
 
     var datasets = [];
-    var styleFor = { Sungrow: { c: "#c2560f" }, Huawei: { c: "#8a1f2b" }, all: { c: "#c2790f" } };
-    if (chartPlatformFilter === "all"){
-      ["Sungrow","Huawei"].forEach(function(p){
-        var has = records.some(function(r){ return r.platform === p; });
-        if (!has) return;
-        var s = computeSeries(p);
-        var full = months.map(function(m){ var idx = s.months.indexOf(m); return idx > -1 ? s.avg[idx] : null; });
-        datasets.push({ label: p, data: full, borderColor: styleFor[p].c, backgroundColor: styleFor[p].c, tension: .3, spanGaps: true, pointRadius: 3 });
+    if (selectedProjects.length > 0){
+      selectedProjects.forEach(function(p){
+        var byMonth = computeProjectSeries(p.platform, p.plant);
+        var full = months.map(function(m){ return m in byMonth ? byMonth[m] : null; });
+        datasets.push({ label: p.plant + " (" + p.platform + ")", data: full, borderColor: p.color, backgroundColor: p.color, tension: .3, spanGaps: true, pointRadius: 3 });
       });
     } else {
-      var s = computeSeries(chartPlatformFilter);
-      var full = months.map(function(m){ var idx = s.months.indexOf(m); return idx > -1 ? s.avg[idx] : null; });
-      datasets.push({ label: chartPlatformFilter, data: full, borderColor: styleFor[chartPlatformFilter].c, backgroundColor: styleFor[chartPlatformFilter].c, tension: .3, spanGaps: true, pointRadius: 3 });
+      var styleFor = { Sungrow: { c: "#c2560f" }, Huawei: { c: "#8a1f2b" }, all: { c: "#c2790f" } };
+      if (chartPlatformFilter === "all"){
+        ["Sungrow","Huawei"].forEach(function(p){
+          var has = records.some(function(r){ return r.platform === p; });
+          if (!has) return;
+          var s = computeSeries(p);
+          var full = months.map(function(m){ var idx = s.months.indexOf(m); return idx > -1 ? s.avg[idx] : null; });
+          datasets.push({ label: p, data: full, borderColor: styleFor[p].c, backgroundColor: styleFor[p].c, tension: .3, spanGaps: true, pointRadius: 3 });
+        });
+      } else {
+        var s = computeSeries(chartPlatformFilter);
+        var full = months.map(function(m){ var idx = s.months.indexOf(m); return idx > -1 ? s.avg[idx] : null; });
+        datasets.push({ label: chartPlatformFilter, data: full, borderColor: styleFor[chartPlatformFilter].c, backgroundColor: styleFor[chartPlatformFilter].c, tension: .3, spanGaps: true, pointRadius: 3 });
+      }
     }
 
     var textColor = getComputedStyle(document.body).getPropertyValue("--text-dim").trim();
@@ -437,7 +489,7 @@
         responsive: true, maintainAspectRatio: false,
         interaction: { mode: "index", intersect: false },
         plugins: {
-          legend: { display: datasets.length > 1, labels: { color: textColor, font: { family: "Manrope", weight: 700, size: 12 } } },
+          legend: { display: datasets.length > 1 || selectedProjects.length > 0, labels: { color: textColor, font: { family: "Manrope", weight: 700, size: 12 } } },
           tooltip: { callbacks: { label: function(ctx){ return ctx.dataset.label + ": " + ctx.parsed.y.toFixed(1) + "%"; } } }
         },
         scales: {
@@ -538,6 +590,79 @@
       chartPlatformFilter = btn.dataset.platform;
       renderChart();
     });
+  });
+
+  // ---------- project compare (multi-select search) ----------
+  function allProjectOptions(){
+    var seen = {};
+    var out = [];
+    records.forEach(function(r){
+      var key = r.platform + "|" + r.plant;
+      if (!seen[key]){ seen[key] = true; out.push({ platform: r.platform, plant: r.plant }); }
+    });
+    out.sort(function(a,b){ return a.plant.localeCompare(b.plant); });
+    return out;
+  }
+
+  function isSelected(platform, plant){
+    return selectedProjects.some(function(p){ return p.platform === platform && p.plant === plant; });
+  }
+
+  function renderChips(){
+    var box = document.getElementById("project-chips");
+    box.innerHTML = selectedProjects.map(function(p){
+      return '<span class="chip"><span class="dot" style="background:' + p.color + ';"></span>' +
+        escapeHtml(p.plant) + ' <small style="color:var(--text-faint);font-weight:600;">(' + p.platform + ')</small>' +
+        '<button type="button" data-platform="' + escapeHtml(p.platform) + '" data-plant="' + escapeHtml(p.plant) + '">✕</button></span>';
+    }).join("");
+    box.querySelectorAll("button").forEach(function(btn){
+      btn.addEventListener("click", function(){
+        var platform = btn.dataset.platform, plant = btn.dataset.plant;
+        selectedProjects = selectedProjects.filter(function(p){ return !(p.platform === platform && p.plant === plant); });
+        renderChips();
+        renderChart();
+      });
+    });
+  }
+
+  function showSuggestions(query){
+    var box = document.getElementById("project-suggestions");
+    if (!query){ box.classList.remove("open"); box.innerHTML = ""; return; }
+    var q = query.toLowerCase();
+    var matches = allProjectOptions().filter(function(p){
+      return p.plant.toLowerCase().indexOf(q) > -1 && !isSelected(p.platform, p.plant);
+    }).slice(0, 20);
+    if (!matches.length){ box.classList.remove("open"); box.innerHTML = ""; return; }
+    box.innerHTML = matches.map(function(p){
+      var pill = p.platform === "Sungrow" ? "pill-sungrow" : "pill-huawei";
+      return '<div class="suggestion-item" data-platform="' + escapeHtml(p.platform) + '" data-plant="' + escapeHtml(p.plant) + '">' +
+        '<span class="pill ' + pill + '">' + p.platform + '</span>' + escapeHtml(p.plant) + '</div>';
+    }).join("");
+    box.classList.add("open");
+    box.querySelectorAll(".suggestion-item").forEach(function(item){
+      item.addEventListener("click", function(){
+        var platform = item.dataset.platform, plant = item.dataset.plant;
+        var color = PROJECT_COLORS[selectedProjects.length % PROJECT_COLORS.length];
+        selectedProjects.push({ platform: platform, plant: plant, color: color });
+        document.getElementById("project-search").value = "";
+        box.classList.remove("open"); box.innerHTML = "";
+        renderChips();
+        renderChart();
+      });
+    });
+  }
+
+  document.getElementById("project-search").addEventListener("input", function(e){
+    showSuggestions(e.target.value.trim());
+  });
+  document.getElementById("project-search").addEventListener("focus", function(e){
+    if (e.target.value.trim()) showSuggestions(e.target.value.trim());
+  });
+  document.addEventListener("click", function(e){
+    var wrap = document.querySelector(".project-search-wrap");
+    if (wrap && !wrap.contains(e.target)) {
+      document.getElementById("project-suggestions").classList.remove("open");
+    }
   });
   document.getElementById("filter-month").addEventListener("change", renderTable);
   document.getElementById("filter-platform").addEventListener("change", renderTable);
