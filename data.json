@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-13T14:50:59.497285+00:00",
+  "generatedAt": "2026-09-14T04:02:23.380910+00:00",
   "records": [
     {
       "platform": "Huawei",
@@ -9620,6 +9620,816 @@
       "daysTotal": 31,
       "daysExcluded": 8,
       "status": "Low"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "2 K INTERFOOD CO.,LTD.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 121.0,
+      "monthlyPR": 52.98,
+      "daysTotal": 30,
+      "daysExcluded": 30,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "2 K INTERFOOD CO.,LTD.",
+      "yearMonth": "2026-07",
+      "capacityKwp": 121.0,
+      "monthlyPR": 70.87,
+      "daysTotal": 30,
+      "daysExcluded": 30,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "2 K INTERFOOD CO.,LTD.",
+      "yearMonth": "2026-08",
+      "capacityKwp": 121.0,
+      "monthlyPR": 75.86,
+      "daysTotal": 27,
+      "daysExcluded": 27,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "ADB Sealant Co.,Ltd. 252",
+      "yearMonth": "2026-06",
+      "capacityKwp": 483.96,
+      "monthlyPR": 76.5,
+      "daysTotal": 24,
+      "daysExcluded": 24,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "ADB Sealant Co.,Ltd. 252",
+      "yearMonth": "2026-07",
+      "capacityKwp": 483.96,
+      "monthlyPR": 76.73,
+      "daysTotal": 23,
+      "daysExcluded": 23,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "ADB Sealant Co.,Ltd. 252",
+      "yearMonth": "2026-08",
+      "capacityKwp": 483.96,
+      "monthlyPR": 77.11,
+      "daysTotal": 19,
+      "daysExcluded": 17,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "ADB Sealant Co.,Ltd. 271",
+      "yearMonth": "2026-06",
+      "capacityKwp": 415.29,
+      "monthlyPR": 78.26,
+      "daysTotal": 22,
+      "daysExcluded": 17,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "ADB Sealant Co.,Ltd. 271",
+      "yearMonth": "2026-07",
+      "capacityKwp": 415.29,
+      "monthlyPR": 78.22,
+      "daysTotal": 22,
+      "daysExcluded": 18,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "ADB Sealant Co.,Ltd. 271",
+      "yearMonth": "2026-08",
+      "capacityKwp": 415.29,
+      "monthlyPR": 78.97,
+      "daysTotal": 20,
+      "daysExcluded": 11,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "ADB Sealant Co.,Ltd. 816",
+      "yearMonth": "2026-06",
+      "capacityKwp": 117.72,
+      "monthlyPR": 72.21,
+      "daysTotal": 24,
+      "daysExcluded": 24,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "ADB Sealant Co.,Ltd. 816",
+      "yearMonth": "2026-07",
+      "capacityKwp": 117.72,
+      "monthlyPR": 73.32,
+      "daysTotal": 24,
+      "daysExcluded": 24,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "ADB Sealant Co.,Ltd. 816",
+      "yearMonth": "2026-08",
+      "capacityKwp": 117.72,
+      "monthlyPR": 75.33,
+      "daysTotal": 18,
+      "daysExcluded": 18,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "BETTA LATEX INTERNATIONAL COMPANY LIMITED",
+      "yearMonth": "2026-06",
+      "capacityKwp": 123.2,
+      "monthlyPR": 83.63,
+      "daysTotal": 23,
+      "daysExcluded": 22,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "BETTA LATEX INTERNATIONAL COMPANY LIMITED",
+      "yearMonth": "2026-07",
+      "capacityKwp": 123.2,
+      "monthlyPR": 82.25,
+      "daysTotal": 20,
+      "daysExcluded": 16,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "BETTA LATEX INTERNATIONAL COMPANY LIMITED",
+      "yearMonth": "2026-08",
+      "capacityKwp": 123.2,
+      "monthlyPR": 83.53,
+      "daysTotal": 21,
+      "daysExcluded": 15,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "Beef Cluster Cooperative Limited. BGPL",
+      "yearMonth": "2026-06",
+      "capacityKwp": 149.73,
+      "monthlyPR": 81.65,
+      "daysTotal": 29,
+      "daysExcluded": 20,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "Beef Cluster Cooperative Limited. BGPL",
+      "yearMonth": "2026-07",
+      "capacityKwp": 149.73,
+      "monthlyPR": 80.53,
+      "daysTotal": 28,
+      "daysExcluded": 23,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "Beef Cluster Cooperative Limited. BGPL",
+      "yearMonth": "2026-08",
+      "capacityKwp": 149.73,
+      "monthlyPR": 81.26,
+      "daysTotal": 27,
+      "daysExcluded": 18,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "CHUNWANG METAL CO., LTD.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 372.9,
+      "monthlyPR": 82.24,
+      "daysTotal": 18,
+      "daysExcluded": 15,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "CHUNWANG METAL CO., LTD.",
+      "yearMonth": "2026-07",
+      "capacityKwp": 372.9,
+      "monthlyPR": 80.4,
+      "daysTotal": 20,
+      "daysExcluded": 17,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "CHUNWANG METAL CO., LTD.",
+      "yearMonth": "2026-08",
+      "capacityKwp": 372.9,
+      "monthlyPR": 80.26,
+      "daysTotal": 22,
+      "daysExcluded": 15,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "CITC Enterprise (Thai) Co.,Ltd.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 644.9,
+      "monthlyPR": 83.47,
+      "daysTotal": 22,
+      "daysExcluded": 21,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "CITC Enterprise (Thai) Co.,Ltd.",
+      "yearMonth": "2026-07",
+      "capacityKwp": 644.9,
+      "monthlyPR": 82.96,
+      "daysTotal": 16,
+      "daysExcluded": 15,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "CITC Enterprise (Thai) Co.,Ltd.",
+      "yearMonth": "2026-08",
+      "capacityKwp": 644.9,
+      "monthlyPR": 82.35,
+      "daysTotal": 18,
+      "daysExcluded": 17,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "Chyuan Lih Industrial Co.,Ltd.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 991.9,
+      "monthlyPR": 79.32,
+      "daysTotal": 24,
+      "daysExcluded": 21,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "Chyuan Lih Industrial Co.,Ltd.",
+      "yearMonth": "2026-07",
+      "capacityKwp": 991.9,
+      "monthlyPR": 78.85,
+      "daysTotal": 25,
+      "daysExcluded": 23,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "Chyuan Lih Industrial Co.,Ltd.",
+      "yearMonth": "2026-08",
+      "capacityKwp": 991.9,
+      "monthlyPR": 79.03,
+      "daysTotal": 21,
+      "daysExcluded": 15,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "Ecolab Limited (178.2kWp)",
+      "yearMonth": "2026-06",
+      "capacityKwp": 178.2,
+      "monthlyPR": 76.45,
+      "daysTotal": 23,
+      "daysExcluded": 23,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "Ecolab Limited (178.2kWp)",
+      "yearMonth": "2026-07",
+      "capacityKwp": 178.2,
+      "monthlyPR": 77.3,
+      "daysTotal": 24,
+      "daysExcluded": 24,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "Ecolab Limited (178.2kWp)",
+      "yearMonth": "2026-08",
+      "capacityKwp": 178.2,
+      "monthlyPR": 78.08,
+      "daysTotal": 24,
+      "daysExcluded": 24,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "FOEI YANG PARAWOOD COMPANY LIMITED (Phase 1&2)",
+      "yearMonth": "2026-06",
+      "capacityKwp": 667.08,
+      "monthlyPR": 88.5,
+      "daysTotal": 14,
+      "daysExcluded": 14,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "FOEI YANG PARAWOOD COMPANY LIMITED (Phase 1&2)",
+      "yearMonth": "2026-07",
+      "capacityKwp": 667.08,
+      "monthlyPR": 94.44,
+      "daysTotal": 9,
+      "daysExcluded": 9,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "FOEI YANG PARAWOOD COMPANY LIMITED (Phase 1&2)",
+      "yearMonth": "2026-08",
+      "capacityKwp": 667.08,
+      "monthlyPR": 107.42,
+      "daysTotal": 14,
+      "daysExcluded": 14,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "JOHN CHUAN INDUSTRIAL (THAILAND) COMPANY LIMITED 1",
+      "yearMonth": "2026-06",
+      "capacityKwp": 104.64,
+      "monthlyPR": 80.52,
+      "daysTotal": 25,
+      "daysExcluded": 25,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "JOHN CHUAN INDUSTRIAL (THAILAND) COMPANY LIMITED 1",
+      "yearMonth": "2026-07",
+      "capacityKwp": 104.64,
+      "monthlyPR": 81.36,
+      "daysTotal": 21,
+      "daysExcluded": 21,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "JOHN CHUAN INDUSTRIAL (THAILAND) COMPANY LIMITED 1",
+      "yearMonth": "2026-08",
+      "capacityKwp": 104.64,
+      "monthlyPR": 82.32,
+      "daysTotal": 15,
+      "daysExcluded": 15,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "JOHN CHUAN INDUSTRIAL (THAILAND) COMPANY LIMITED 2",
+      "yearMonth": "2026-06",
+      "capacityKwp": 62.13,
+      "monthlyPR": 80.55,
+      "daysTotal": 25,
+      "daysExcluded": 23,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "JOHN CHUAN INDUSTRIAL (THAILAND) COMPANY LIMITED 2",
+      "yearMonth": "2026-07",
+      "capacityKwp": 62.13,
+      "monthlyPR": 81.35,
+      "daysTotal": 19,
+      "daysExcluded": 19,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "JOHN CHUAN INDUSTRIAL (THAILAND) COMPANY LIMITED 2",
+      "yearMonth": "2026-08",
+      "capacityKwp": 62.13,
+      "monthlyPR": 81.17,
+      "daysTotal": 15,
+      "daysExcluded": 14,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "LIN SAN PAN INDUSTRY CO.,LTD",
+      "yearMonth": "2026-06",
+      "capacityKwp": 178.2,
+      "monthlyPR": 76.3,
+      "daysTotal": 21,
+      "daysExcluded": 21,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "LIN SAN PAN INDUSTRY CO.,LTD",
+      "yearMonth": "2026-07",
+      "capacityKwp": 178.2,
+      "monthlyPR": 79.36,
+      "daysTotal": 15,
+      "daysExcluded": 15,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "LIN SAN PAN INDUSTRY CO.,LTD",
+      "yearMonth": "2026-08",
+      "capacityKwp": 178.2,
+      "monthlyPR": 78.51,
+      "daysTotal": 4,
+      "daysExcluded": 4,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "Life Pack Co.,Ltd. BGPL",
+      "yearMonth": "2026-06",
+      "capacityKwp": 179.3,
+      "monthlyPR": 79.15,
+      "daysTotal": 25,
+      "daysExcluded": 24,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "Life Pack Co.,Ltd. BGPL",
+      "yearMonth": "2026-07",
+      "capacityKwp": 179.3,
+      "monthlyPR": 78.03,
+      "daysTotal": 24,
+      "daysExcluded": 23,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "Life Pack Co.,Ltd. BGPL",
+      "yearMonth": "2026-08",
+      "capacityKwp": 179.3,
+      "monthlyPR": 78.37,
+      "daysTotal": 21,
+      "daysExcluded": 20,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "Oriental Can Co.,Ltd",
+      "yearMonth": "2026-06",
+      "capacityKwp": 999.9,
+      "monthlyPR": 81.8,
+      "daysTotal": 27,
+      "daysExcluded": 25,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "Oriental Can Co.,Ltd",
+      "yearMonth": "2026-07",
+      "capacityKwp": 999.9,
+      "monthlyPR": 83.23,
+      "daysTotal": 28,
+      "daysExcluded": 20,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "Oriental Can Co.,Ltd",
+      "yearMonth": "2026-08",
+      "capacityKwp": 999.9,
+      "monthlyPR": 84.03,
+      "daysTotal": 22,
+      "daysExcluded": 13,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "PALET WOODRAYONG COMPANY LIMITED",
+      "yearMonth": "2026-06",
+      "capacityKwp": 624.57,
+      "monthlyPR": 77.62,
+      "daysTotal": 17,
+      "daysExcluded": 17,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "PALET WOODRAYONG COMPANY LIMITED",
+      "yearMonth": "2026-07",
+      "capacityKwp": 624.57,
+      "monthlyPR": 75.86,
+      "daysTotal": 15,
+      "daysExcluded": 15,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "PALET WOODRAYONG COMPANY LIMITED",
+      "yearMonth": "2026-08",
+      "capacityKwp": 624.57,
+      "monthlyPR": 75.52,
+      "daysTotal": 13,
+      "daysExcluded": 13,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "Saveone flea market Co.,Ltd",
+      "yearMonth": "2026-06",
+      "capacityKwp": 321.75,
+      "monthlyPR": 80.82,
+      "daysTotal": 29,
+      "daysExcluded": 27,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "Saveone flea market Co.,Ltd",
+      "yearMonth": "2026-07",
+      "capacityKwp": 321.75,
+      "monthlyPR": 83.06,
+      "daysTotal": 30,
+      "daysExcluded": 15,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "Saveone flea market Co.,Ltd",
+      "yearMonth": "2026-08",
+      "capacityKwp": 321.75,
+      "monthlyPR": 84.45,
+      "daysTotal": 24,
+      "daysExcluded": 11,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "TAI THAI RUBBER CO.,LTD. 1",
+      "yearMonth": "2026-06",
+      "capacityKwp": 686.7,
+      "monthlyPR": 79.69,
+      "daysTotal": 25,
+      "daysExcluded": 24,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "TAI THAI RUBBER CO.,LTD. 1",
+      "yearMonth": "2026-07",
+      "capacityKwp": 686.7,
+      "monthlyPR": 79.64,
+      "daysTotal": 22,
+      "daysExcluded": 21,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "TAI THAI RUBBER CO.,LTD. 1",
+      "yearMonth": "2026-08",
+      "capacityKwp": 686.7,
+      "monthlyPR": 79.15,
+      "daysTotal": 20,
+      "daysExcluded": 19,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "THAI EVER PLASTIC CO.,LTD.  2",
+      "yearMonth": "2026-06",
+      "capacityKwp": 765.18,
+      "monthlyPR": 79.33,
+      "daysTotal": 25,
+      "daysExcluded": 18,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "THAI EVER PLASTIC CO.,LTD.  2",
+      "yearMonth": "2026-07",
+      "capacityKwp": 765.18,
+      "monthlyPR": 79.66,
+      "daysTotal": 20,
+      "daysExcluded": 10,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "THAI EVER PLASTIC CO.,LTD.  2",
+      "yearMonth": "2026-08",
+      "capacityKwp": 765.18,
+      "monthlyPR": 80.69,
+      "daysTotal": 24,
+      "daysExcluded": 10,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "THAI EVER PLASTIC CO.,LTD. 1",
+      "yearMonth": "2026-06",
+      "capacityKwp": 936.31,
+      "monthlyPR": 77.81,
+      "daysTotal": 25,
+      "daysExcluded": 24,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "THAI EVER PLASTIC CO.,LTD. 1",
+      "yearMonth": "2026-07",
+      "capacityKwp": 936.31,
+      "monthlyPR": 79.55,
+      "daysTotal": 20,
+      "daysExcluded": 19,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "THAI EVER PLASTIC CO.,LTD. 1",
+      "yearMonth": "2026-08",
+      "capacityKwp": 936.31,
+      "monthlyPR": 79.46,
+      "daysTotal": 21,
+      "daysExcluded": 19,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "THAI MAGICTAPE CO., LTD.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 426.19,
+      "monthlyPR": 86.04,
+      "daysTotal": 21,
+      "daysExcluded": 19,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "THAI MAGICTAPE CO., LTD.",
+      "yearMonth": "2026-07",
+      "capacityKwp": 426.19,
+      "monthlyPR": 85.99,
+      "daysTotal": 19,
+      "daysExcluded": 18,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "THAI MAGICTAPE CO., LTD.",
+      "yearMonth": "2026-08",
+      "capacityKwp": 426.19,
+      "monthlyPR": 85.24,
+      "daysTotal": 15,
+      "daysExcluded": 13,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "Thai Chiew Charn Industry Co., Ltd.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 204.92,
+      "monthlyPR": 79.47,
+      "daysTotal": 24,
+      "daysExcluded": 24,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "Thai Chiew Charn Industry Co., Ltd.",
+      "yearMonth": "2026-07",
+      "capacityKwp": 204.92,
+      "monthlyPR": 79.55,
+      "daysTotal": 23,
+      "daysExcluded": 23,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "Thai Chiew Charn Industry Co., Ltd.",
+      "yearMonth": "2026-08",
+      "capacityKwp": 204.92,
+      "monthlyPR": 79.11,
+      "daysTotal": 23,
+      "daysExcluded": 20,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "Thai Rungrueang Plastic Co.,Ltd.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 468.7,
+      "monthlyPR": 77.31,
+      "daysTotal": 24,
+      "daysExcluded": 20,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "Thai Rungrueang Plastic Co.,Ltd.",
+      "yearMonth": "2026-07",
+      "capacityKwp": 468.7,
+      "monthlyPR": 77.52,
+      "daysTotal": 21,
+      "daysExcluded": 17,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "Thai Rungrueang Plastic Co.,Ltd.",
+      "yearMonth": "2026-08",
+      "capacityKwp": 468.7,
+      "monthlyPR": 77.43,
+      "daysTotal": 21,
+      "daysExcluded": 17,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "Thrive Precision Industry Co.,Ltd.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 218.0,
+      "monthlyPR": 84.84,
+      "daysTotal": 28,
+      "daysExcluded": 24,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "Thrive Precision Industry Co.,Ltd.",
+      "yearMonth": "2026-07",
+      "capacityKwp": 218.0,
+      "monthlyPR": 84.29,
+      "daysTotal": 26,
+      "daysExcluded": 23,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "Thrive Precision Industry Co.,Ltd.",
+      "yearMonth": "2026-08",
+      "capacityKwp": 218.0,
+      "monthlyPR": 84.0,
+      "daysTotal": 27,
+      "daysExcluded": 21,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "UNITEX RUBBER CO.,LTD.",
+      "yearMonth": "2026-06",
+      "capacityKwp": 189.2,
+      "monthlyPR": 82.09,
+      "daysTotal": 11,
+      "daysExcluded": 10,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "UNITEX RUBBER CO.,LTD.",
+      "yearMonth": "2026-07",
+      "capacityKwp": 189.2,
+      "monthlyPR": 83.42,
+      "daysTotal": 16,
+      "daysExcluded": 13,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "UNITEX RUBBER CO.,LTD.",
+      "yearMonth": "2026-08",
+      "capacityKwp": 189.2,
+      "monthlyPR": 84.0,
+      "daysTotal": 19,
+      "daysExcluded": 18,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "Unilamp Co.,Ltd",
+      "yearMonth": "2026-06",
+      "capacityKwp": 61.6,
+      "monthlyPR": 87.07,
+      "daysTotal": 20,
+      "daysExcluded": 20,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "Unilamp Co.,Ltd",
+      "yearMonth": "2026-07",
+      "capacityKwp": 61.6,
+      "monthlyPR": 85.39,
+      "daysTotal": 21,
+      "daysExcluded": 21,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
+    },
+    {
+      "platform": "Sungrow",
+      "plant": "Unilamp Co.,Ltd",
+      "yearMonth": "2026-08",
+      "capacityKwp": 61.6,
+      "monthlyPR": 110.36,
+      "daysTotal": 19,
+      "daysExcluded": 17,
+      "status": "Final (วิศวกรยืนยันแล้ว)"
     }
   ]
 }
